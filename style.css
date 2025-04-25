@@ -58,11 +58,15 @@ h1, h2, h3, h4, h5, h6 {
 .topbar {
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+    text-align: center;
+    padding-top: 1rem;
 }
 
 .intro-bar {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
+    text-align: center;
+    padding: 0.5rem 15rem;
 }
 
 .left-bar {
