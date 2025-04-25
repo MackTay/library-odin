@@ -126,3 +126,8 @@ button:active {
 svg {
     height: 1rem;
 }
+
+table, td, th {
+    border: 2px black solid;
+    border-collapse: collapse;
+}
