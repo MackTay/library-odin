@@ -58,24 +58,30 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 1fr 1fr 6fr 1fr;
+    background-color: red;
 }
 
 .topbar {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
-    text-align: center;
-    padding-top: 1rem;
+    background-color: cyan;
 }
 
 .intro-bar {
     grid-column: 1 / 4;
     grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    background-color: plum;
 }
 
 .intro-bar > span {
     display: block;
-    margin: 0.5rem 15rem;
+    margin: 0 20% 1rem 20%;
 }
 
 button {
@@ -83,7 +89,6 @@ button {
     border-radius: 16px;
     border: none;
     background-color: var(--primary-color);
-    margin: 2rem;
     padding: 0.5rem 2rem;
     font-weight: 900;
     color: azure;
@@ -92,21 +97,25 @@ button {
 .left-bar {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    background-color: var(--primary-color);
 }
 
 .right-bar {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
+    background-color: var(--primary-color);
 }
 
 .library {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    background-color: var(--secondary-color);
 }
 
 .footer {
     grid-column: 1 / 4;
     grid-row: 4 / 5;
+    background-color: blue;
 }
 
 svg {
