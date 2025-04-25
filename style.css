@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 1fr 1fr 6fr 1fr;
     background-color: red;
+    height: 100vh;
 }
 
 .topbar {
@@ -92,6 +93,10 @@ button {
     padding: 0.5rem 2rem;
     font-weight: 900;
     color: azure;
+}
+
+button:active {
+    background-color: var(--secondary-color);
 }
 
 .left-bar {
