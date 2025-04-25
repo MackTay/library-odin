@@ -2,8 +2,8 @@
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr, 1fr, 6fr, 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 1fr 6fr 1fr;
 }
 
 .topbar {
@@ -26,7 +26,16 @@
     grid-row: 3 / 4;
 }
 
+.library {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
 .footer {
     grid-column: 1 / 4;
     grid-row: 4 / 5;
+}
+
+svg {
+    height: 1rem;
 }
