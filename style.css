@@ -114,6 +114,7 @@ button:active {
 .library {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
+    display: grid;
     background-color: var(--secondary-color);
 }
 
@@ -130,4 +131,8 @@ svg {
 table, td, th {
     border: 2px black solid;
     border-collapse: collapse;
+}
+
+td {
+    text-align: center;
 }
