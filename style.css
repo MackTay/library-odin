@@ -121,11 +121,15 @@ button:active {
 .footer {
     grid-column: 1 / 4;
     grid-row: 4 / 5;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     background-color: blue;
 }
 
 svg {
     height: 1rem;
+    display: inline;
 }
 
 table, td, th {
