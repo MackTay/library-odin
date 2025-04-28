@@ -50,15 +50,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-    --primary-color: salmon;
-    --secondary-color: cyan;
+    --primary-color: #F5C45E;
+    --secondary-color: #BE3D2A;
+    --tertiary-color: #E78B48;
 }
 
 .container {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     grid-template-rows: 1fr 1fr 6fr 1fr;
-    background-color: red;
     height: 100vh;
 }
 
@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
-    background-color: cyan;
+    background-color: var(--primary-color);
 }
 
 .intro-bar {
@@ -78,7 +78,9 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     text-align: center;
     margin-bottom: 1rem;
-    background-color: plum;
+    padding-bottom: 1rem;
+    box-shadow: 2px 6px 4px lightgray;
+    background-color: var(--primary-color);
 }
 
 .intro-bar > span {
@@ -88,28 +90,27 @@ h1, h2, h3, h4, h5, h6 {
 
 button {
     appearance: none;
-    border-radius: 16px;
+    border-radius: 26px;
     border: none;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 0.5rem 2rem;
     font-weight: 900;
+    box-shadow: 0px 0px 30px lightgoldenrodyellow;
     color: azure;
 }
 
 button:active {
-    background-color: var(--secondary-color);
+    background-color: var(--tertiary-color);
 }
 
 .left-bar {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
-    background-color: var(--primary-color);
 }
 
 .right-bar {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
-    background-color: var(--primary-color);
 }
 
 .library {
@@ -117,7 +118,6 @@ button:active {
     grid-row: 3 / 4;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    background-color: var(--secondary-color);
 }
 
 .footer {
@@ -126,7 +126,7 @@ button:active {
     display: grid;
     justify-content: center;
     align-items: center;
-    background-color: blue;
+    background-color: var(--primary-color);
 }
 
 svg {
