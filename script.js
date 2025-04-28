@@ -10,6 +10,8 @@ const myLibrary = [
     }
 ];
 
+// Function for adding book objects to the myLibrary array
+
 function Book(title, author, pages, hotOrNot) {
     if (!new.target) {
         throw Error("You must include 'new' to call the constuctor!");
@@ -25,4 +27,6 @@ function addToLibrary(title, author, pages, hotOrNot) {
     const book = new Book(title, author, pages, hotOrNot);
     return myLibrary.push(book);
 }
+
+const table = document.getElementById("table");
 
