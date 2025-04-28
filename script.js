@@ -29,4 +29,6 @@ function addToLibrary(title, author, pages, hotOrNot) {
 }
 
 const table = document.getElementById("table");
+const row = document.createElement("tr");
+const cell = document.createElement("td");
 
