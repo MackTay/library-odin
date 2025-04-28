@@ -116,6 +116,7 @@ button:active {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     display: grid;
+    grid-template-rows: repeat(2, 1fr);
     background-color: var(--secondary-color);
 }
 
