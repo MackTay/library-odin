@@ -79,3 +79,9 @@ function addToTable(myLibrary) {
     });
 }
 
+const button = document.querySelector(".add");
+
+button.addEventListener("click", () => {
+    /* this will be for the prompt to add books */
+})
+
