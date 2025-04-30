@@ -23,6 +23,26 @@
     <div class="right-bar"></div>
     <div class="intro-bar">
         <span class="instructions">You want a cool library? One that tells you a book's title and EVEN HOW MANY PAGES IT HAS?? We got you. Decimate that "Add" button below, put yo details in, and become part of a legendary library.</span>
+        <dialog>
+            <form action="#">
+                <fieldset>
+                    <legend>Book Details</legend>
+                    <label for="title">Book Title:</label>
+                    <input type="text" id="title" name="book_title" placeholder="Martin the Warrior">
+
+                    <label for="author">Book Author:</label>
+                    <input type="text" id="author" name="book_author" placeholder="Brian Jacques">
+
+                    <label for="pages">Pagecount:</label>
+                    <input type="number" name="pages" id="book_pages" placeholder="376">
+
+                    <label for="hot">Hot or Not?</label>
+                    <input type="radio" name="hot_check" id="hot">
+
+                    <button type="submit">Let's go!</button>
+                </fieldset>
+            </form>
+        </dialog>   
         <form action="#">
             <button class="add" type="button">Add</button>
         </form>
