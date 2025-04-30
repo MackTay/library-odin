@@ -9,9 +9,9 @@ const myLibrary = [
         id: crypto.randomUUID
     },
     {
-        title: "Kafka on the Shore",
-        author: "Haruki Murakami",
-        pages: "480",
+        title: "Red Rising",
+        author: "Pierce Brown",
+        pages: "382",
         hotOrNot: "Hot",
         id: crypto.randomUUID
     }
@@ -46,7 +46,7 @@ Every time the function runs, we need to replace the table on the screen with a 
 
 */
 
-function addToTable(myLibrary) {
+function addToTable() {
     document.querySelectorAll("#table tr")
     .forEach(row => {
         row.remove();
