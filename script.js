@@ -6,14 +6,14 @@ const myLibrary = [
         author: "Haruki Murakami",
         pages: "480",
         hotOrNot: "Hot",
-        id: crypto.randomUUID
+        id: crypto.randomUUID()
     },
     {
         title: "Red Rising",
         author: "Pierce Brown",
         pages: "382",
         hotOrNot: "Hot",
-        id: crypto.randomUUID
+        id: crypto.randomUUID()
     }
 ];
 
