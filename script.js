@@ -1,5 +1,6 @@
 /* JavaScript code goes here */
 
+
 const myLibrary = [
     {
         title: "Kafka on the Shore",
@@ -78,6 +79,8 @@ function addToTable() {
         .textContent = book.id;
     });
 }
+
+addToTable();
 
 const button = document.querySelector(".add");
 
