@@ -7,6 +7,13 @@ const myLibrary = [
         pages: "480",
         hotOrNot: "Hot",
         id: crypto.randomUUID
+    },
+    {
+        title: "Kafka on the Shore",
+        author: "Haruki Murakami",
+        pages: "480",
+        hotOrNot: "Hot",
+        id: crypto.randomUUID
     }
 ];
 
@@ -29,7 +36,6 @@ function addToLibrary(title, author, pages, hotOrNot) {
 }
 
 const table = document.getElementById("table");
-const cell = document.createElement("td");
 
 /*
 Every time the function runs, we need to replace the table on the screen with a new one that uses data from mLibrary array. So... Step:
@@ -41,13 +47,35 @@ Every time the function runs, we need to replace the table on the screen with a 
 */
 
 function addToTable(myLibrary) {
-    
-    const row = document.createElement("tr");
-    row.id = "row"
+    document.querySelectorAll("#table tr")
+    .forEach(row => {
+        row.remove();
+    });
 
     myLibrary.forEach(book => {
-        row.appendChild(cell)
-        .textContent = book;
+        const row = document.createElement("tr");
+        row.class = "row";
+        table.appendChild(row);
+
+        const titleCell = document.createElement("td");
+        row.appendChild(titleCell)
+        .textContent = book.title;
+
+        const authorCell = document.createElement("td");
+        row.appendChild(authorCell)
+        .textContent = book.author;
+
+        const pagesCell = document.createElement("td");
+        row.appendChild(pagesCell)
+        .textContent = book.pages;
+
+        const hotOrNotCell = document.createElement("td");
+        row.appendChild(hotOrNotCell)
+        .textContent = book.hotOrNot;
+
+        const idCell = document.createElement("td");
+        row.appendChild(idCell)
+        .textContent = book.id;
     });
 }
 
