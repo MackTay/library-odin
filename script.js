@@ -38,14 +38,7 @@ function addToLibrary(title, author, pages, hotOrNot) {
 
 const table = document.getElementById("table");
 
-/*
-Every time the function runs, we need to replace the table on the screen with a new one that uses data from mLibrary array. So... Step:
-1. remove the old table content
-2. For every book object in myLibrary:
-    - Append a new row to the tbody with an id
-    - Append a td for each data from the object to the row
-
-*/
+/* Function for updating the table in the html */
 
 function addToTable() {
     document.querySelectorAll("#table tr")
@@ -82,9 +75,10 @@ function addToTable() {
 
 addToTable();
 
-const button = document.querySelector(".add");
+const addButton = document.getElementById("add");
+const bookForm = document.getElementById("bookForm")
 
-button.addEventListener("click", () => {
-    /* this will be for the prompt to add books */
+addButton.addEventListener("click", () => {
+    bookForm.showModal();
 })
 
