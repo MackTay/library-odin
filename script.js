@@ -45,6 +45,11 @@ function addToTable() {
         row.remove();
     });
 
+    document.querySelectorAll("#delete-column button")
+    .forEach(btn => {
+        btn.remove();
+    });
+
     myLibrary.forEach(book => {
         const row = document.createElement("tr");
         row.class = "row";
@@ -69,6 +74,12 @@ function addToTable() {
         const idCell = document.createElement("td");
         row.appendChild(idCell)
         .textContent = book.id;
+
+        const deleteCol = document.getElementById("delete-column");
+        const deleteBtn = document.createElement("button");
+        deleteBtn.class = "delete-button";
+        deleteCol.appendChild(deleteBtn);
+        deleteBtn.innerText = "Blow it up";
     });
 }
 
