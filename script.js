@@ -53,6 +53,7 @@ function addToTable() {
     myLibrary.forEach(book => {
         const row = document.createElement("tr");
         row.class = "row";
+        row.setAttribute("data-id", book.id);
         table.appendChild(row);
 
         const titleCell = document.createElement("td");
@@ -78,12 +79,26 @@ function addToTable() {
         const deleteCol = document.getElementById("delete-column");
         const deleteBtn = document.createElement("button");
         deleteBtn.class = "delete-button";
+        deleteBtn.setAttribute("data-id", book.id);
         deleteCol.appendChild(deleteBtn);
         deleteBtn.innerText = "Blow it up";
     });
 }
 
 addToTable();
+
+const deleteCol = document.getElementById("delete-column");
+
+deleteCol.addEventListener("click", (event) => {
+    let rows = document.querySelectorAll("tr");
+    let id = event.target.dataset.id;
+    rows.forEach(row => {
+        if (row.dataset.id === id) {
+            row.remove();
+        }
+    })
+    event.target.remove();
+});
 
 const bookForm = document.getElementById("bookForm");
 const addButton = document.getElementById("add");
