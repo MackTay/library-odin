@@ -82,10 +82,9 @@ addButton.addEventListener("click", () => {
     bookForm.showModal();
 })
 
-const name = document.getElementById("title").value;
-const author = document.getElementById("title").value;
-const pages = document.getElementById("title").value;
-const id = document.getElementById("title").value;
+const title = document.getElementById("title").value;
+const author = document.getElementById("author").value;
+const pages = document.getElementById("pages").value;
 let hot = "hot";
 if (document.getElementById("hot").checked) {
     hot = "hot";
@@ -93,8 +92,9 @@ if (document.getElementById("hot").checked) {
     hot = "not";
 }
 
-bookForm.addEventListener("click", 
-
-
-);
+bookForm.addEventListener("click", (event) => {
+    event.preventDefault();
+    addToLibrary(title, author, pages, hot);
+    addToTable();
+});
 
