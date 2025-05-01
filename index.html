@@ -10,6 +10,7 @@
         @font-face {
             font-family: 'lato';
             src: url('./fonts/lato.woff2');
+            font-display: swap;
         }
     </style>
 </head>
@@ -39,14 +40,12 @@
                     <label for="hot">Hot or Not?</label>
                     <input type="checkbox" name="hot_check" id="hot">
 
-                    <button id="cancel" type="button">Cancel</button>
+                    <button command="close" id="cancel">Cancel</button>
                     <button id="confirm" type="submit">Let's go!</button>
                 </fieldset>
             </form>
         </dialog>   
-        <form action="#">
-            <button id="add" type="button">Add</button>
-        </form>
+        <button id="add">Add</button>
     </div>
     <div class="library">
         <table>

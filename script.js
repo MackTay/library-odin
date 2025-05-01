@@ -74,17 +74,22 @@ function addToTable() {
 
 addToTable();
 
-const addButton = document.getElementById("add");
 const bookForm = document.getElementById("bookForm");
+const addButton = document.getElementById("add");
+const cancelButton = document.getElementById("cancel");
 const confirmButton = document.getElementById("confirm");
 
 addButton.addEventListener("click", () => {
     bookForm.showModal();
 })
 
-const title = document.getElementById("title").value;
-const author = document.getElementById("author").value;
-const pages = document.getElementById("pages").value;
+cancelButton.addEventListener("click", () => {
+    bookForm.close();
+});
+
+const title = document.getElementById("title");
+const author = document.getElementById("author");
+const pages = document.getElementById("pages");
 let hot = "hot";
 if (document.getElementById("hot").checked) {
     hot = "hot";
@@ -92,9 +97,30 @@ if (document.getElementById("hot").checked) {
     hot = "not";
 }
 
-bookForm.addEventListener("click", (event) => {
+if (title) {
+    const value = title.value;
+    console.log(value);
+} else {
+    console.log("Element not found!");
+}
+
+/* bookForm.addEventListener("click", (event) => {
     event.preventDefault();
+
+    let title = document.getElementById("title");
+    title = title.value;
+    let author = document.getElementById("author");
+    author = author.value;
+    let pages = document.getElementById("pages");
+    pages = pages.value;
+    let hot = document.getElementById("hot");
+    if (hot.checked) {
+        hot = "hot";
+    } else {
+        hot = "not";
+}
+
     addToLibrary(title, author, pages, hot);
     addToTable();
-});
+}); */
 
