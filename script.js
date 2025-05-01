@@ -27,7 +27,7 @@ function Book(title, author, pages, hotOrNot) {
     this.author = author;
     this.pages = pages;
     this.hotOrNot = hotOrNot;
-    this.id = crypto.randomUUID;
+    this.id = crypto.randomUUID();
 }
 
 function addToLibrary(title, author, pages, hotOrNot) {
@@ -87,40 +87,25 @@ cancelButton.addEventListener("click", () => {
     bookForm.close();
 });
 
-const title = document.getElementById("title");
-const author = document.getElementById("author");
-const pages = document.getElementById("pages");
-let hot = "hot";
-if (document.getElementById("hot").checked) {
-    hot = "hot";
-} else {
-    hot = "not";
-}
-
-if (title) {
-    const value = title.value;
-    console.log(value);
-} else {
-    console.log("Element not found!");
-}
-
-/* bookForm.addEventListener("click", (event) => {
+confirmButton.addEventListener("click", (event) => {
     event.preventDefault();
 
     let title = document.getElementById("title");
-    title = title.value;
+    let titleVal = title.value;
     let author = document.getElementById("author");
-    author = author.value;
+    let authorVal = author.value;
     let pages = document.getElementById("pages");
-    pages = pages.value;
+    let pagesVal = pages.value;
     let hot = document.getElementById("hot");
+    let hotVal = "";
     if (hot.checked) {
-        hot = "hot";
+        hotVal = "Hot";
     } else {
-        hot = "not";
+        hotVal = "Not";
 }
 
-    addToLibrary(title, author, pages, hot);
+    addToLibrary(titleVal, authorVal, pagesVal, hotVal);
     addToTable();
-}); */
+    bookForm.close();
+});
 
