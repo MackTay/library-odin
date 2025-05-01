@@ -1,6 +1,5 @@
 /* JavaScript code goes here */
 
-
 const myLibrary = [
     {
         title: "Kafka on the Shore",
@@ -76,9 +75,26 @@ function addToTable() {
 addToTable();
 
 const addButton = document.getElementById("add");
-const bookForm = document.getElementById("bookForm")
+const bookForm = document.getElementById("bookForm");
+const confirmButton = document.getElementById("confirm");
 
 addButton.addEventListener("click", () => {
     bookForm.showModal();
 })
+
+const name = document.getElementById("title").value;
+const author = document.getElementById("title").value;
+const pages = document.getElementById("title").value;
+const id = document.getElementById("title").value;
+let hot = "hot";
+if (document.getElementById("hot").checked) {
+    hot = "hot";
+} else {
+    hot = "not";
+}
+
+bookForm.addEventListener("click", 
+
+
+);
 
