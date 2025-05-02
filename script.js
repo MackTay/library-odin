@@ -96,7 +96,14 @@ deleteCol.addEventListener("click", (event) => {
         if (row.dataset.id === id) {
             row.remove();
         }
-    })
+    });
+
+    for (let i = myLibrary.length - 1; i >= 0; i--) {
+        if (myLibrary[i].id === id) {
+            myLibrary.splice(i, 1);
+        }
+    }
+
     event.target.remove();
 });
 
