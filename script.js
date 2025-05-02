@@ -7,7 +7,14 @@ const myLibrary = [
         pages: "480",
         read: "Yes",
         hotOrNot: "Hot",
-        id: crypto.randomUUID()
+        id: crypto.randomUUID(),
+        readChange: function() {
+            if (this.read === "Yes") {
+                this.read = "No";
+            } else {
+                this.read = "Yes";
+            }
+        }
     },
     {
         title: "Red Rising",
@@ -15,7 +22,14 @@ const myLibrary = [
         pages: "382",
         read: "No",
         hotOrNot: "Hot",
-        id: crypto.randomUUID()
+        id: crypto.randomUUID(),
+        readChange: function() {
+            if (this.read === "Yes") {
+                this.read = "No";
+            } else {
+                this.read = "Yes";
+            }
+        }
     }
 ];
 
@@ -31,6 +45,13 @@ function Book(title, author, pages, read, hotOrNot) {
     this.read = read;
     this.hotOrNot = hotOrNot;
     this.id = crypto.randomUUID();
+    this.readChange = function() {
+        if (this.read === "Yes") {
+            this.read = "No";
+        } else {
+            this.read = "Yes";
+        }
+    };
 }
 
 function addToLibrary(title, author, pages, read, hotOrNot) {
