@@ -101,6 +101,7 @@ function addToTable() {
 
         const readButton = document.createElement("button");
         readButton.className = "read-button";
+        readButton.setAttribute("data-id", book.id);
         readCell.appendChild(readButton);
         readButton.innerText = "Edit";
 
@@ -114,7 +115,7 @@ function addToTable() {
 
         const deleteCol = document.getElementById("delete-column");
         const deleteBtn = document.createElement("button");
-        deleteBtn.class = "delete-button";
+        deleteBtn.className = "delete-button";
         deleteBtn.setAttribute("data-id", book.id);
         deleteCol.appendChild(deleteBtn);
         deleteBtn.innerText = "Blow it up";
@@ -124,6 +125,16 @@ function addToTable() {
 }
 
 addToTable();
+
+table.addEventListener("click", (event) => {
+    myLibrary.forEach(book => {
+        if (event.target.dataset.id === book.id) {
+            book.readChange();
+        }
+    })
+
+    addToTable();
+});
 
 const deleteCol = document.getElementById("delete-column");
 
@@ -188,4 +199,3 @@ confirmButton.addEventListener("click", (event) => {
     addToTable();
     bookForm.close();
 });
-
