@@ -75,6 +75,10 @@ function addToTable() {
         row.appendChild(readCell)
         .textContent = book.read;
 
+        const readButton = document.createElement("button");
+        readButton.class = "read-button";
+        readCell.appendChild(readButton);
+
         const hotOrNotCell = document.createElement("td");
         row.appendChild(hotOrNotCell)
         .textContent = book.hotOrNot;
@@ -89,6 +93,8 @@ function addToTable() {
         deleteBtn.setAttribute("data-id", book.id);
         deleteCol.appendChild(deleteBtn);
         deleteBtn.innerText = "Blow it up";
+
+
     });
 }
 
