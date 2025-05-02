@@ -21,19 +21,20 @@ const myLibrary = [
 
 // Function for adding book objects to the myLibrary array
 
-function Book(title, author, pages, hotOrNot) {
+function Book(title, author, pages, read, hotOrNot) {
     if (!new.target) {
         throw Error("You must include 'new' to call the constuctor!");
     }
     this.title = title;
     this.author = author;
     this.pages = pages;
+    this.read = read;
     this.hotOrNot = hotOrNot;
     this.id = crypto.randomUUID();
 }
 
-function addToLibrary(title, author, pages, hotOrNot) {
-    const book = new Book(title, author, pages, hotOrNot);
+function addToLibrary(title, author, pages, read, hotOrNot) {
+    const book = new Book(title, author, pages, read, hotOrNot);
     return myLibrary.push(book);
 }
 
@@ -135,6 +136,15 @@ confirmButton.addEventListener("click", (event) => {
     let authorVal = author.value;
     let pages = document.getElementById("pages");
     let pagesVal = pages.value;
+
+    let read = document.getElementById("read");
+    let readVal = "";
+    if (read.checked) {
+        readVal = "Yes";
+    } else {
+        readVal = "No";
+}
+
     let hot = document.getElementById("hot");
     let hotVal = "";
     if (hot.checked) {
@@ -143,7 +153,7 @@ confirmButton.addEventListener("click", (event) => {
         hotVal = "Not";
 }
 
-    addToLibrary(titleVal, authorVal, pagesVal, hotVal);
+    addToLibrary(titleVal, authorVal, pagesVal, readVal, hotVal);
     addToTable();
     bookForm.close();
 });
