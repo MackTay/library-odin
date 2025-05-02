@@ -5,6 +5,7 @@ const myLibrary = [
         title: "Kafka on the Shore",
         author: "Haruki Murakami",
         pages: "480",
+        read: "Yes",
         hotOrNot: "Hot",
         id: crypto.randomUUID()
     },
@@ -12,6 +13,7 @@ const myLibrary = [
         title: "Red Rising",
         author: "Pierce Brown",
         pages: "382",
+        read: "No",
         hotOrNot: "Hot",
         id: crypto.randomUUID()
     }
@@ -67,6 +69,10 @@ function addToTable() {
         const pagesCell = document.createElement("td");
         row.appendChild(pagesCell)
         .textContent = book.pages;
+
+        const readCell = document.createElement("td");
+        row.appendChild(readCell)
+        .textContent = book.read;
 
         const hotOrNotCell = document.createElement("td");
         row.appendChild(hotOrNotCell)
