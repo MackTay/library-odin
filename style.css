@@ -100,6 +100,19 @@ button {
     color: azure;
 }
 
+td span,
+td button {
+  display: block;
+}
+
+td button {
+  padding: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+}
+
 #add {
   width: max(50px, 10%);
   padding: 0.5rem 0.5rem;

@@ -72,12 +72,16 @@ function addToTable() {
         .textContent = book.pages;
 
         const readCell = document.createElement("td");
-        row.appendChild(readCell)
-        .textContent = book.read;
+        row.appendChild(readCell);
+        const readSpan = document.createElement("span");
+        readSpan.className = "read-span";
+        readCell.appendChild(readSpan);
+        readSpan.textContent = book.read;
 
         const readButton = document.createElement("button");
-        readButton.class = "read-button";
+        readButton.className = "read-button";
         readCell.appendChild(readButton);
+        readButton.innerText = "Edit";
 
         const hotOrNotCell = document.createElement("td");
         row.appendChild(hotOrNotCell)
