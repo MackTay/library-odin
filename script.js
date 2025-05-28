@@ -35,17 +35,18 @@ const myLibrary = [
 
 // Function for adding book objects to the myLibrary array
 
-function Book(title, author, pages, read, hotOrNot) {
-    if (!new.target) {
-        throw Error("You must include 'new' to call the constuctor!");
+class Book {
+    id = crypto.randomUUID();
+
+    constructor(title, author, pages, read, hotOrNot) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.hotOrNot = hotOrNot;
     }
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.hotOrNot = hotOrNot;
-    this.id = crypto.randomUUID();
-    this.readChange = function() {
+
+    readChange() {
         if (this.read === "Yes") {
             this.read = "No";
         } else {
